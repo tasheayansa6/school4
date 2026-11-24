@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', Verdana, sans-serif;
+
+  --color-zera: #0a4f29;
+  --color-zera-dark: #083f20;
+  --color-zera-darker: #041f10;
+  --color-zera-darkest: #03170c;
+  --color-zera-light: #538369;
+  --color-zera-lighter: #cedbd4;
+  --color-zera-lightest: #e6ede9;
+  --color-sun: #f7b917;
+  --color-sun-dark: #c59412;
+  --color-sun-light: #f9ce5c;
+  --color-paper: #f2f2f2;
+  --color-mute: #54524d;
+  --color-line: #dadad8;
+  --color-intl: #668c4a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-zera);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-sun) 45%, white);
+  }
+}
+
+@layer utilities {
+  .hero-wave {
+    animation: hero-wave 18s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  .hero-rise {
+    animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes hero-wave {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.28);
+  }
+  100% {
+    transform: translate3d(28px, 0, 0) scale(1.4);
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-wave,
+  .hero-rise {
+    animation: none !important;
+  }
+}

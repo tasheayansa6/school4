@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <rect width="48" height="48" y="4" rx="10" fill="#0A4F29"/>
+  <path d="M14 36 L20 16 L26 28 L32 16 L38 36" stroke="#F7B917" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="62" y="28" fill="#0A4F29" font-family="Plus Jakarta Sans, Verdana, sans-serif" font-size="22" font-weight="700">Wow</text>
+  <text x="62" y="46" fill="#0A4F29" font-family="Plus Jakarta Sans, Verdana, sans-serif" font-size="12" font-weight="500">Secondary School</text>
+</svg>
